@@ -1,0 +1,113 @@
+/*
+* @Author: Sebastian B. Mohr
+* @Date:   2020-08-07 16:24:28
+* @Last Modified by:   Sebastian
+* @Last Modified time: 2020-08-07 17:03:31
+*/
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+	font-family: "Open Sans", sans-serif;
+	color: #272832;
+}
+
+a {
+  color: #149dde;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #37b3ec;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Navigator
+--------------------------------------------------------------*/
+
+.navigator {
+	padding-top: 30px;
+}
+
+.navigator * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigator a {
+  display: flex;
+  align-items: center;
+  color: #a9a3b0;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.navigator a i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.navigator > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+
+/*active nav and animation on hov3er*/
+.navigator a:hover, .navigator .active > a, .navigator li:hover > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigator a:hover i, .navigator .active > a i, .navigator li:hover > a i {
+  color: #159ddd;
+}
+
+/*--------------------------------------------------------------
+# Header i.e. sidebar and profile above navbar (me) 
+--------------------------------------------------------------*/
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 325px;
+	transition: all ease-in-out 0.5s;
+	z-index: 9997;
+	transition: all 0.5s;
+	background: #0f0626;
+}
+
+#header .me img{
+	margin: 15px auto;
+	width: 120px;
+	border: 6px solid #271c48;
+	display: block;
+}
+
+#header .me h1{
+	font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;	
+}
+
+#header .me h1 a,#header .me a:hover{
+  color: #fff;
+  text-decoration: none;	
+}
