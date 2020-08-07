@@ -20,6 +20,7 @@
 </head>
 
 <body>
+  <!-- mobile navigator toggle button -->
   <button type="button" class="mobile-navigator-toggle d-xl-none"><i class="fas fa-bars"></i></button>
 
   <header id="header">
@@ -27,24 +28,28 @@
       <div class="me">
         <img src="assets/img/profile.png" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Sebastian Mohr</a></h1>
-        
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/semohr"><i class="fa fa-github"></i></a>
+        </div>
       </div>
 
       <nav class="navigator">
         <ul>
           <li class="active"><a href="index.html"></a></li>        
-          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#mywork"><i class="bx bx-envelope"></i> My works</a></li>
-          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+          <li><a href="#about"><i class="fa fa-user"></i> <span>About</span></a></li>
+          <li><a href="#resume"><i class="fa fa-file"></i><span>Resume</span></a></li>
+          <li><a href="#myworks"><i class="fa fa-file-signature"></i></i>My works</a></li>
+          <li><a href="#contact"><i class="fa fa-envelope"></i>Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section>
-    <div class="d-flex flex-column">
-      Test2
+  <!-- First look section -->
+  <section id="first_look" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="first_look-container">
+      <h1>Sebastian Mohr</h1>
+      <p>I'm <span class="typewriter" data-period="2500" data-type='["Physicist.","Developer."]'></span></p>
     </div> 
   </section>
 
