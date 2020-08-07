@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-08-07 17:03:31
+* @Last Modified time: 2020-08-07 17:55:02
 */
 
 
@@ -28,6 +28,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+
 
 /*--------------------------------------------------------------
 # Navigator
@@ -74,6 +75,39 @@ h1, h2, h3, h4, h5, h6 {
   color: #159ddd;
 }
 
+/*Mobile Navigator toggle*/
+.mobile-navigator-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-navigator-toggle i {
+  color: #149ddd;
+}
+
+.mobile-navigator-active {
+  overflow: hidden;
+}
+
+#header.mobile-navigator-active{
+  left: 0px;
+}
+
+.mobile-navigator-active .mobile-navigator-toggle i {
+  color: #fff;
+}
+
+
 /*--------------------------------------------------------------
 # Header i.e. sidebar and profile above navbar (me) 
 --------------------------------------------------------------*/
@@ -110,4 +144,17 @@ h1, h2, h3, h4, h5, h6 {
 #header .me h1 a,#header .me a:hover{
   color: #fff;
   text-decoration: none;	
+}
+
+#main {
+  margin-left: 325px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -325px;
+  }
+  #main {
+    margin-left: 0;
+  }
 }
