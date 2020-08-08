@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 17:18:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-08-07 20:48:30
+* @Last Modified time: 2020-08-08 14:32:54
 */
 
 
@@ -17,10 +17,11 @@ navbar_btn[0].onclick = function(e){
   console.log("hi")
   header = document.getElementById("header")
   header.classList.toggle("mobile-navigator-active");
-
   //Repalce icon with cross (x)
   navbar_btn[0].children[0].classList.toggle("fa-bars");
   navbar_btn[0].children[0].classList.toggle("fa-times");
+  //Toggle overflow i.e scrolling
+  document.body.classList.toggle("prevent-scrolling");
 };
 
 
@@ -80,3 +81,46 @@ window.addEventListener('load', (event) => {
     }
   }
 })
+
+
+/*---------------------------------------------
+# To top button
+-----------------------------------------------*/
+
+var to_top_btn = document.getElementsByClassName("to-top")[0]
+window.addEventListener('scroll', function(e){
+  if(document.documentElement.scrollTop>100){
+    to_top_btn.classList.add("is-visible")
+  }
+  else{
+    to_top_btn.classList.remove("is-visible")
+  }
+})
+
+// We need to keep track of faded in elements so we can apply fade out later in CSS
+document.addEventListener('animationstart', function (e) {
+  if (e.animationName === 'fade-in') {
+      e.target.classList.add('did-fade-in');
+  }
+});
+
+document.addEventListener('animationend', function (e) {
+  if (e.animationName === 'fade-out') {
+      e.target.classList.remove('did-fade-in');
+   }
+});
+
+/*----------------------------------------------
+# Smooth scrolling
+#https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
+-----------------------------------------------*/
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: "start",
+        });
+    });
+});
