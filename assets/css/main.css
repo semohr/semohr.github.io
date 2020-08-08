@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-08-08 14:34:52
+* @Last Modified time: 2020-08-08 21:04:40
 */
 
 
@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: #271c48;
+  color: #261abd;
   text-decoration: none;
 }
 
@@ -59,6 +59,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #6f7180;
 }
 
+.navigator .active i {
+  color: #7762b5;
+}
+.navigator .active {
+  color: #7762b5;
+}
+
 .navigator > ul > li {
   position: relative;
   white-space: nowrap;
@@ -71,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navigator a:hover i, .navigator .active > a i, .navigator li:hover > a i {
-  color: #7762b5;
+  color: #fff;
 }
 
 /*Mobile Navigator toggle*/
@@ -378,4 +385,113 @@ section {
   to {
     opacity: 0;
   }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer{
+  padding: 18px;
+  color: #a9a3b0;
+  position: fixed;
+  width: 325px;
+  left: 0;
+  bottom: 0;
+  font-size: 15px;
+  z-index: 9999;
+}
+
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0f0626;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #234099;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #0f0626;
+  margin-bottom: 10px;
+}
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-right: 14px 
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+/*--------------------------------------------------------------
+# My works
+--------------------------------------------------------------*/
+
+.myworks .works-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0f0626;
+
+}
+
+.myworks .works-item {
+  padding: 0 24px 24px 20px;
+  margin-top: -2px;
+  position: relative;
+}
+
+.myworks .works-item h4{
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #0f0626;
+  margin-bottom: 10px;
+}
+
+.myworks .works-item .works-link {
+  padding-right: 10px;
 }
