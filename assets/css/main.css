@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-08-08 21:04:40
+* @Last Modified time: 2020-08-09 16:19:53
 */
 
 
@@ -80,6 +80,35 @@ h1, h2, h3, h4, h5, h6 {
 .navigator a:hover i, .navigator .active > a i, .navigator li:hover > a i {
   color: #fff;
 }
+
+
+.navigator .sub-navigator > a {
+  display: none;
+  padding-left: 30px;
+}
+
+.navigator .sub-navigator > a.visible {
+  display: block;
+  top: 0;
+  animation: slide-in 0.3s forwards;
+}
+
+@keyframes slide-in {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0%); }
+}
+
+
+.navigator .sub-navigator a.active{
+  padding-left: 40px;
+}
+
+.navigator .sub-navigator a {
+  font-size: 14px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
 
 /*Mobile Navigator toggle*/
 .mobile-navigator-toggle {
@@ -284,6 +313,10 @@ section {
   padding: 60px 0;
   overflow: hidden;
 }
+section .no-padding{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 .section-bg {
   background: #f5f8fd;
@@ -474,11 +507,10 @@ section {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #0f0626;
-
 }
 
 .myworks .works-item {
-  padding: 0 24px 24px 20px;
+  padding: 20px 24px 30px 20px;
   margin-top: -2px;
   position: relative;
 }
@@ -494,4 +526,12 @@ section {
 
 .myworks .works-item .works-link {
   padding-right: 10px;
+}
+
+.nav-link {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0f0626; 
 }

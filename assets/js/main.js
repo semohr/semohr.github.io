@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 17:18:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-08-08 19:02:27
+* @Last Modified time: 2020-08-09 15:06:19
 */
 
 
@@ -136,6 +136,7 @@ var $navigationLinks = document.querySelectorAll('nav > ul > li > a');
 // cache (in reversed order) the sections
 var $sections = document.getElementsByTagName('section');
 
+
 // map each section id to their corresponding navigation link
 var sectionIdTonavigationLink = {};
 for (var i = $sections.length-1; i >= 0; i--) {
@@ -206,6 +207,20 @@ function highlightNavigation() {
             $navigationLinks[i].className = $navigationLinks[i].className.replace(/ active/, '');
           }
       } 
+      //Dirty sub navigator hack
+      var ids_ex = ["myworks","publications","websites","other-projects"]
+      if (ids_ex.indexOf(id)>=0){
+        // Set all sub navigator visible
+        for(i=1;i<ids_ex.length;i++) {
+          sectionIdTonavigationLink[ids_ex[i]][0].className = sectionIdTonavigationLink[ids_ex[i]][0].className.replace(/ visible/, '');
+          // add .active class to the current link
+          sectionIdTonavigationLink[ids_ex[i]][0].className += (' visible');
+        }
+      } else{
+        for(i=1;i<ids_ex.length;i++) {
+          sectionIdTonavigationLink[ids_ex[i]][0].className = sectionIdTonavigationLink[ids_ex[i]][0].className.replace(/ visible/, '');
+        }
+      }
       // we have found our section, so we return false to exit the each loop
       return false;
     }
@@ -213,3 +228,4 @@ function highlightNavigation() {
 }
 
 window.addEventListener('scroll',throttle(highlightNavigation,150));
+
