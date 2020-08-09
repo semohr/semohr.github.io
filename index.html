@@ -174,8 +174,24 @@
             </div>
 
             <div class="works-item">
-              <h4>Bachelors thesis</h4>
-              <p>TODO: Abstract, Upload</p>
+
+              <h4>Bachelors thesis: Monte Carlo simulations of periodic self-avoiding walks</h4>
+              <p> The self-avoiding walk is one of the simples basic problems in statistical physics. None than less, few properties can be determined in a rigorous mathematical fashion. In short a self-avoiding walk is a sequence of moves on a lattice also sometimes called a path. Theses paths are not allowed to cross over themself i.e. they do not visit a site more than once. One can use the framework of Monte Carlo methods to get good estimates for local and global properties of such paths. </p>
+
+              <div class="row">
+                <div class="col-lg-5">
+                  <figure>
+                    <img src="assets/img/ba.png" class="img-fluid" alt="Picture of periodic self avoiding walk"/>
+                    <figcaption>
+                    Sample image of a periodic self avoiding walk with a rotation by π/2. Where the original walk is green and the rotated ones are red.
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="col-lg-7">
+                  <p>In my bachelors thesis I looked at a further restricted type of self-avoiding walk, the periodic self-avoiding walk. These periodic self-avoiding walks have to additionally suffice periodic boundary conditions on the lattice. Overall there was a lot of work done for the normal self-avoiding walk but barely anything for the periodic case. Therefore, I choose the periodic self-avoiding walk as my topic for the bachelors thesis.</p>
+                  <p>In short, I wrote a program for the enumeration of short periodic self-avoiding walks and another one for the Monte Carlo simulation of longer walks. I compared important properties such as end to end distance or gyration radius between the exact enumeration and the approximations from Monte Carlo simulation. All programs were written in C++ and the data was evaluated using python and matplotlib. If all of that sound interesting or fun to you, feel free to take a look.</p>
+                </div>
+              </div>
               <a class="works-link" href=""><i class="fas fa-chevron-right"></i> PDF</a>
               <a class="works-link" href=""><i class="fas fa-chevron-right"></i> Supplementary source code</a>
             </div>
