@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 17:18:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-08-09 15:06:19
+* @Last Modified time: 2020-08-10 16:53:31
 */
 
 
@@ -129,6 +129,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 # Could have done the for loop myself but short amount of google does the
 # job too.
 # https://stackoverflow.com/questions/32395988/highlight-menu-item-when-scrolling-down-to-section
+# With some tweeks
 ----------------------------------------------------*/
 
 // cache the navigation links 
@@ -207,6 +208,7 @@ function highlightNavigation() {
             $navigationLinks[i].className = $navigationLinks[i].className.replace(/ active/, '');
           }
       } 
+
       //Dirty sub navigator hack
       var ids_ex = ["myworks","publications","websites","other-projects"]
       if (ids_ex.indexOf(id)>=0){
@@ -216,6 +218,8 @@ function highlightNavigation() {
           // add .active class to the current link
           sectionIdTonavigationLink[ids_ex[i]][0].className += (' visible');
         }
+        sectionIdTonavigationLink["myworks"][0].className = sectionIdTonavigationLink["myworks"][0].className.replace(/ active/, '');
+        sectionIdTonavigationLink["myworks"][0].className += (' active');
       } else{
         for(i=1;i<ids_ex.length;i++) {
           sectionIdTonavigationLink[ids_ex[i]][0].className = sectionIdTonavigationLink[ids_ex[i]][0].className.replace(/ visible/, '');
