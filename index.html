@@ -62,7 +62,7 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <p>I'm a physics student who got quite interested in numerical and hence computational methods along my studies. Additionally, the web was always a very an interesting platform for me so I also learned my share of web development.</p>
         </div>
 
         <div class="row">
@@ -71,21 +71,20 @@
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
               <h3>Scientist &amp; Developer</h3>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              <p>At the moment, we are trying to model the Impact of non-pharmaceutical interventions for Europe. It is a complex problem, which among other things is depending on country wide and age structural differences. We are using the framework of Bayesian inference combined with Monte-Carlo methods to create such a model.</p>
+              <p>Currently, I’m maintaining the Github repositories/code for different Covid projects and am looking into the available data/interventions for selected European countries. I’m personally most interested in the computational aspect of the project and am quite keen on finding country wide differences in availability and structure of data.</p>
           </div>
         </div>
 
       </div>
     </section>
 
-
     <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
           <h2>Resume</h2>
-          <p>Always up for questions on my resume.</p>
+          <p>If you have questions on my resume or want more Informations on a specific topic feel free to write me an E-Mail.</p>
         </div>
 
         <div class="row">
@@ -114,7 +113,7 @@
               <h4>Student assistant COVID-19 research</h4>
               <h5>2020 - x</h5>
               <p><em>Max Planck Institute, Göttingen</em></p>
-              <p>Corona and stuff</p>
+              <p>COVID-19 research</p>
             </div>
             <div class="resume-item">
               <h4>IT-Support Projektteam DreamHack</h4>
@@ -141,6 +140,7 @@
 
       </div>
 
+    <!--
     </section id="skills" class="skills">
       <div class="container">
         <div class="section-title">
@@ -154,7 +154,7 @@
       </div>
       </div>
     <section>
-      
+    -->
 
 
     <section id="myworks" class="myworks">
@@ -167,17 +167,41 @@
         <div class="row">
           <section id="publications" class="no-padding">
             <h3 class="works-title">Publications</h4>
+
+            <div class="works-item">
+              <h4>The challenges of containing SARS-CoV-2 via test-trace-and-isolate</h4>
+              <p>Without a cure, vaccine, or proven long-term immunity against SARS-CoV-2, test-trace-and-isolate (TTI) strategies present a promising tool to contain the viral spread.
+              For any TTI strategy, however, a major challenge arises from pre- and asymptomatic transmission as well as TTI-avoiders, which contribute to "hidden", unnoticed infection chains.
+              </p>
+              <div class="row">
+                <div class="col-lg-5">
+                  <figure>
+                    <img src="assets/img/tti-overview.png" class="img-fluid" alt="Overview tti"/>
+                  </figure>
+                </div>
+                <div class="col-lg-7">
+                  <p>In our semi-analytical model, we identified two distinct tipping points between controlled and uncontrolled spreading:
+                  one, at which the behavior-driven reproduction number $\RtH$ of the hidden infections becomes too large to be compensated by the available TTI capabilities, and one at which the number of new infections starts to exceed the tracing capacity, causing a self-accelerating spread.</p>
+                  <p>
+                  We investigated how these tipping points depend on realistic limitations like limited cooperativity, missing contacts, and imperfect isolation, finding that TTI is likely not sufficient to contain the natural spread of SARS-CoV-2. Therefore, complementary measures like reduced physical contacts and improved hygiene probably remain necessary.</p>
+                </div>
+              </div>
+              <div class="works-links">
+                <a class="works-link" href=""><i class="fas fa-chevron-right"></i> PDF</a>
+                <a class="works-link" href="https://github.com/Priesemann-Group/covid19_tti"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
+              </div>
+            </div>
+
             <div class="works-item">
               <h4>Model-based and model-free characterization of epidemic outbreaks</h4>
               <p>Work in progress paper/publication</p>
-              <div clas="works-links">
+              <div class="works-links">
                 <a class="works-link" href="https://raw.githubusercontent.com/Priesemann-Group/covid19_inference_forecast/master/technical_notes_dehning_etal_2020.pdf"><i class="fas fa-chevron-right"></i> PDF</a>
                 <a class="works-link" href="https://github.com/Priesemann-Group/covid19_inference_forecast"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
               </div>
             </div>
 
             <div class="works-item">
-
               <h4>Bachelors thesis: Monte Carlo simulations of periodic self-avoiding walks</h4>
               <p> The self-avoiding walk is one of the simples basic problems in statistical physics. None than less, few properties can be determined in a rigorous mathematical fashion. In short a self-avoiding walk is a sequence of moves on a lattice also sometimes called a path. Theses paths are not allowed to cross over themself i.e. they do not visit a site more than once. One can use the framework of Monte Carlo methods to get good estimates for local and global properties of such paths. </p>
 
@@ -205,6 +229,15 @@
           <section id="websites" class="no-padding">
             <h3 class="works-title">Websites</h3>
             <p>In the past, I designed and built websites for me and some relatives. All of them were made free of charge and in my free time. I'm pretty sure I did not follow all best practices for web development, but did my best at the time being. There are also some small javascript apps I made to demonstrate small physical or mathematical constructs, these are listed below in the "Fun little spare time projects" section since the are not necessary a standalone website.</p>
+
+            <div class="works-item">
+              <h4>Test-trace-isolate simulator</h4>
+              <p>This website was created to have an convenient way to change parameters in the numeric simulation of the differential equations in the "The challenges of containing SARS-CoV-2 via test-trace-and-isolate" publication (see above). The website was also used to validate the results i.e. mainly the plots of the paper which were generated with matlab beforehand. The numerical simulation is using Runge-Kutta 4 which I implemented using C++ and ported to the browser with WebAssembly. The interactive plots were created using HighCharts and the main layout was done via bootstrap. Overall this website was quite the fun project and taught me quite a lot about WebAssembly and interaction with binary code in the browser.
+              </p>
+              <a class="works-link" href="https://covid19-tti.ds.mpg.de"><i class="fas fa-chevron-right"></i> Website</a>
+              <a class="works-link" href="https://github.com/semohr/covid19_testing"><i class="fas fa-chevron-right"></i> Source code</a>
+            </div>
+
             <div class="works-item">
               <h4>My personal website</h4>
               <p>The website (the one you are viewing right now) was made with bootstrap v5 and native javascript. I took some visual inspiration from <a href="https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/">iPortfolio</a> and if I copied some javascript code snippets from the web they are referenced in the source code.</p>
@@ -255,17 +288,16 @@
             <h2>Contact</h2>
         </div>
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col">
             <h2>Address</h2>
-          </div>
-          <div class="col-lg-4">
-            <h2>Phone</h2>
-          </div>
-          <div class="col-lg-4">
-            <h2>Email</h2>
+            <p>
+              Sebastian Mohr <br>
+              Littstraße 7A <br>
+              04103 Leipzig <br>
+              Germany 
+            </p>
           </div>
         </div>
-        <p>TODO: Create contact form</p>
       </div>
     </section>
     </section>
@@ -276,7 +308,7 @@
       <div>
         &copy; Sebastian Mohr
       </div>
-      <p>last updated 8. Aug. 2020</p>
+      <p>last updated 3. Sep 2020</p>
     </div>
   </footer>
 
