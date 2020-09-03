@@ -174,27 +174,33 @@
               For any TTI strategy, however, a major challenge arises from pre- and asymptomatic transmission as well as TTI-avoiders, which contribute to "hidden", unnoticed infection chains.
               </p>
               <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                   <figure>
                     <img src="assets/img/tti-overview.png" class="img-fluid" alt="Overview tti"/>
                   </figure>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                   <p>In our semi-analytical model, we identified two distinct tipping points between controlled and uncontrolled spreading:
                   one, at which the behavior-driven reproduction number <math>R<sub>t</sub><sup>H</sup></math> of the hidden infections becomes too large to be compensated by the available TTI capabilities, and one at which the number of new infections starts to exceed the tracing capacity, causing a self-accelerating spread.</p>
                   <p>
                   We investigated how these tipping points depend on realistic limitations like limited cooperativity, missing contacts, and imperfect isolation, finding that TTI is likely not sufficient to contain the natural spread of SARS-CoV-2. Therefore, complementary measures like reduced physical contacts and improved hygiene probably remain necessary.</p>
                 </div>
-                <div class="works-links">
-                  <a class="works-link" href=""><i class="fas fa-chevron-right"></i> PDF</a>
-                  <a class="works-link" href="https://github.com/Priesemann-Group/covid19_tti"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
-                </div>
+              </div>
+              <div class="works-links">
+                <a class="works-link" href=""><i class="fas fa-chevron-right"></i> PDF</a>
+                <a class="works-link" href="https://github.com/Priesemann-Group/covid19_tti"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
               </div>
             </div>
 
             <div class="works-item">
-              <h4>Model-based and model-free characterization of epidemic outbreaks</h4>
-              <p>Work in progress paper/publication</p>
+              <h4>Technical notes on "Inferring change points in the spread of COVID-19 reveals the effectiveness of intervention"</h4>
+              <p>In these technical notes, we provide detailed background information for our work on Bayesian inference of change-points in the spread of SARS-CoV-2 and the effectiveness of non-pharmaceutical interventions (Dehning et al., Science, 2020).</p>
+              <figure>
+                <img src="assets/img/tn-overview.png" class="img-fluid" alt="Overview technical notes"/>
+              </figure>
+
+              <p>We outline the general background of Bayesian inference and of SIR-like models. We explain the assumptions that underlie model-based estimates of the reproduction number and compare them to the assumptions that underlie model-free estimates, such as used in the Robert-Koch Institute situation reports. We highlight effects that originate from the two estimation approaches, and how they may cause differences in the inferred reproduction number. </p>
+              <p>Furthermore, we explore the challenges that originate from data availability — such as publication delays and inconsistent testing — and explain their impact on the time-course of inferred case numbers. Along with alternative data sources, this allowed us to cross-check and verify our previous results.</p>
               <div class="works-links">
                 <a class="works-link" href="https://raw.githubusercontent.com/Priesemann-Group/covid19_inference_forecast/master/technical_notes_dehning_etal_2020.pdf"><i class="fas fa-chevron-right"></i> PDF</a>
                 <a class="works-link" href="https://github.com/Priesemann-Group/covid19_inference_forecast"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
@@ -234,8 +240,10 @@
               <h4>Test-trace-isolate simulator</h4>
               <p>This website was created to have an convenient way to change parameters in the numeric simulation of the differential equations in the "The challenges of containing SARS-CoV-2 via test-trace-and-isolate" publication (see above). The website was also used to validate the results i.e. mainly the plots of the paper which were generated with matlab beforehand. The numerical simulation is using Runge-Kutta 4 which I implemented using C++ and ported to the browser with WebAssembly. The interactive plots were created using HighCharts and the main layout was done via bootstrap. Overall this website was quite the fun project and taught me quite a lot about WebAssembly and interaction with binary code in the browser.
               </p>
-              <a class="works-link" href="https://covid19-tti.ds.mpg.de"><i class="fas fa-chevron-right"></i> Website</a>
-              <a class="works-link" href="https://github.com/semohr/covid19_testing"><i class="fas fa-chevron-right"></i> Source code</a>
+              <div class="works-links">
+                <a class="works-link" href="https://covid19-tti.ds.mpg.de"><i class="fas fa-chevron-right"></i> Website</a>
+                <a class="works-link" href="https://github.com/semohr/covid19_testing"><i class="fas fa-chevron-right"></i> Source code</a>
+              </div>
             </div>
 
             <div class="works-item">
