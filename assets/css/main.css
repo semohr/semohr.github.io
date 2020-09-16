@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-08-11 15:38:20
+* @Last Modified time: 2020-09-16 13:28:05
 */
 
 
@@ -23,6 +23,11 @@ a {
 a:hover {
   color: #271c48;
   text-decoration: none;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
 }
 
 h1, h2, h3, h4, h5, h6 {
