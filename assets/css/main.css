@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-09-16 13:28:05
+* @Last Modified time: 2020-10-18 14:38:01
 */
 
 
@@ -509,13 +509,13 @@ section .no-padding{
 .myworks .works-title {
   font-size: 26px;
   font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
   color: #0f0626;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px
 }
 
 .myworks .works-item {
-  padding: 10px 24px 24px 10px;
+  padding: 10px 24px 10px 10px;
   margin-top: -2px;
   position: relative;
 }
@@ -559,7 +559,7 @@ section .no-padding{
   font-weight: 600;
 }
 .works-link:hover{
-  color #463671;
+  color: #463671;
 }
 .works-links{
   padding-left: 10px;
@@ -571,3 +571,55 @@ section .no-padding{
   margin-bottom: 20px;
   color: #0f0626; 
 }
+.work-description{
+  padding-bottom: 15px !important;
+  padding-top: -10px !important;
+}
+
+/*--------------------------------------------------------------
+# Accordion
+--------------------------------------------------------------*/
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #6f7180;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion.active{
+  background-color: white;
+  color: #7762b5;
+}
+.accordion>i::before{
+  content: "\f067";
+  position: relative;
+}
+.accordion>i:before {
+position: relative;
+top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.accordion.active>i::before{
+  content: "\f068";
+}
+
+/*
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+} 
