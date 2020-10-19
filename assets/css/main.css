@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-10-18 14:38:01
+* @Last Modified time: 2020-10-19 11:16:27
 */
 
 
@@ -538,7 +538,9 @@ section .no-padding{
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #0f0626;
-  padding-bottom: 15px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .myworks .works-item .works-link {
