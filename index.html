@@ -39,7 +39,7 @@
       <nav class="navigator">
         <ul>  
           <li><a href="#about"><i class="fa fa-user"></i> <span>About</span></a></li>
-          <li><a href="#myworks"><i class="fa fa-file-signature"></i></i>My works</a></li>          
+          <li><a href="#myworks"><i class="fa fa-file-signature"></i></i>My work</a></li>          
           <li class="sub-navigator"><a href="#publications"></i></i>Publications</a></li>
           <li class="sub-navigator"><a href="#websites"></i></i>Websites</a></li>
           <li class="sub-navigator"><a href="#other-projects"></i></i>Other projects</a></li>
@@ -61,55 +61,52 @@
   <main id="main">
     <section id="about" class="about">
       <div class="container">
-
         <div class="section-title">
           <h2>About</h2>
-          <p>I'm a physics student who got quite interested in numerical and hence computational methods along my studies. Additionally, the web was always a very an interesting platform for me so I also learned my share of web development.</p>
+        </div> 
+        <div class="description">
+          <p>I am a research assistant for statistical coronavirus pandemic (COVID-19) research in the <a href="www.viola-priesemann.de">priesemann group</a>. We have a variety of projects going on, but my main interest at the moment is to look into the impact of non-pharmaceutical interventions for Europe. We are using the framework of Bayesian inference combined with Monte-Carlo methods to create a statistical model, which among other things is depending on country wide and age structural differences. It is quite the interesting work which we hope to publish soon. Additionally, I am working on my master studies and am still eager to expand my knowledge about numerical methods, computational science, and data science.</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/about-profile.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-              <h3>Scientist &amp; Developer</h3>
-              <p>At the moment, we are trying to model the Impact of non-pharmaceutical interventions for Europe. It is a complex problem, which among other things is depending on country wide and age structural differences. We are using the framework of Bayesian inference combined with Monte-Carlo methods to create such a model.</p>
-              <p>Additionally, I am maintaining the Github repositories/code for different Covid projects and am looking into the available data/interventions for selected European countries. I’m personally most interested in the computational aspect of the project and am quite keen on finding country wide differences in availability and structure of data.</p>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!--
-    </section id="skills" class="skills">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>In the following, you can see a short list of my mentionable knowledge, skills and abilities. I always try to pick up anything useful along my way, whether it is during my studies or my professional experiences.</p>
-        </div>
-      
-      <div class="row">
-        <p>TODO: Add skills</p>
-        <p>C(++), OpenGL, Python, Javascript, HTML,</p>
-      </div>
-      </div>
-    <section>
-    -->
-
-
     <section id="myworks" class="myworks">
       <div class="container">
-        <div class="section-title">
-          <h2>My works</h2>
-          <p></p>
-        </div>
-
+      <div class="section-title">
+        <h2>My Work</h2>
+      </div> 
         <div class="row">
           <section id="publications" class="no-padding">
             <h3 class="works-title">Publications</h3>
-
+            <div class="description">
+              <p>In the following you can see the list of my publication, for each of them I try to include a graphic and the abstract. You can find the links and supplementary material in the descriptions. If you have a question or are interested in any of them, feel free to contact me.</p>
+            </div>
             <!-- Items start here-->
+            <div class="works-item">
+              <div class="works-title accordion">
+                <h4>Towards a long-term control of COVID-19 at low case numbers </h4>
+                <i class="fas fa-lg"></i>
+              </div>
+              <div class="work-description panel">
+                <p>As SARS-CoV-2 is becoming endemic, a sustainable strategy to manage the pandemic is needed, especially when facing a steep wave. We identified a metastable regime at low case numbers, where test-trace-and-isolate (TTI) together with moderate contact reduction is sufficient to control the spread.</p>
+                 <div class="row">
+                  <div class="col-lg-3">
+                    <figure>
+                      <img src="assets/img/long-term-overview.png" class="img-fluid" alt="Overview long-term"/>
+                    </figure>
+                  </div>
+                  <div class="col-lg-9">
+                    <p>However, this control is lost once case numbers overwhelm the limited TTI capacity. Beyond that tipping point, increasingly more infectious individuals remain undetected, generating a self-accelerating spread. To reestablish control, a lockdown (circuit breaker) has to strike a delicate balance between duration, stringency, and timeliness; otherwise, lockdowns are ineffective, or their effect is soon lost. However, once reestablishing control at low case numbers, no additional lockdowns are necessary. In the long-term, immunity and large-scale testing will further facilitate the control of COVID-19.
+                    </p>
+                  </div>
+                </div>
+                <div class="works-links">
+                  <a class="works-link" href="https://arxiv.org/abs/2011.11413"><i class="fas fa-chevron-right"></i> ArXiv</a>
+                  <a class="works-link" href="https://github.com/Priesemann-Group/covid19_research/tree/master/circuit_breaker"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
+                </div>
+              </div>
+            </div>
+
             <div class="works-item">
               <div class="works-title accordion">
                 <h4>The foreshadow of a second wave: An analysis of current COVID-19 fatalities in Germany </h4>
@@ -209,8 +206,10 @@
           <hr>
           <section id="websites" class="no-padding">
             <h3 class="works-title">Websites</h3>
-            <p>In the past, I designed and built websites for me and some relatives. All of them were made free of charge and in my free time. I'm pretty sure I did not follow all best practices for web development, but did my best at the time being. There are also some small javascript apps I made to demonstrate small physical or mathematical constructs, these are listed below in the "Fun little spare time projects" section since the are not necessary a standalone website.</p>
-
+            <div class="description">
+              <p>In the past, I designed and built websites for me and some relatives. All of them were made free of charge and in my free time. I'm pretty sure I did not follow all best practices for web development, but did my best at the time being. Recently I also create some website for my publications, which are also listed below. Most of them use webassembly in some way or another and were quite fun to program.
+              </p>
+            </div>
             <div class="works-item">
               <div class="works-title accordion">
                 <h4>COVID-19 map of Germany</h4>
@@ -291,7 +290,7 @@
                 <i class="fas fa-lg"></i>
               </div>
               <div class="work-description panel">
-                <p>These applets were created for fun i.e. if I saw something interesting online and wanted to recreate it or in my early days as student to apply things I learned in the University. I haven't uploaded all applets yet, but am working on it. For now there is a fractal, double pendulum and circle packing.</p>
+                <p>These applets were created for fun i.e. if I saw something interesting online and wanted to recreate it or in my early days as student to apply things I learned in the university. I haven't uploaded all applets yet, but am working on it. For now there is a fractal, double pendulum and circle packing.</p>
                 <div class="works-links">
                   <a class="works-link" href="https://github.com/semohr/small-js-applets"><i class="fas fa-chevron-right"></i> Source code and applets</a>
                 </div>
@@ -308,7 +307,7 @@
 
         <div class="section-title">
           <h2>Resume</h2>
-          <p>If you have questions on my resume or want more Informations on a specific topic feel free to write me an E-Mail.</p>
+          <p>If you have questions on my resume or want more informations on a specific topic feel free to contact me.</p>
         </div>
 
         <div class="row">
@@ -389,7 +388,7 @@
       <div>
         &copy; Sebastian Mohr
       </div>
-      <p>last updated 8. Nov 2020</p>
+      <p>last updated 3. Dez 2020</p>
     </div>
   </footer>
 
