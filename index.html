@@ -15,7 +15,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-
   <!-- Master CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
@@ -72,9 +71,9 @@
 
     <section id="myworks" class="myworks">
       <div class="container">
-      <div class="section-title">
-        <h2>My Work</h2>
-      </div> 
+        <div class="section-title">
+          <h2>My Work</h2>
+        </div> 
         <div class="row">
           <section id="publications" class="no-padding">
             <h3 class="works-title">Publications</h3>
@@ -102,7 +101,7 @@
               </div>
               <div class="work-description panel">
                 <p>As SARS-CoV-2 is becoming endemic, a sustainable strategy to manage the pandemic is needed, especially when facing a steep wave. We identified a metastable regime at low case numbers, where test-trace-and-isolate (TTI) together with moderate contact reduction is sufficient to control the spread.</p>
-                 <div class="row">
+                <div class="row">
                   <div class="col-lg-3">
                     <figure>
                       <img src="assets/img/long-term-overview.png" class="img-fluid" alt="Overview long-term"/>
@@ -129,7 +128,7 @@
                 <p>A second wave of SARS-CoV-2 is unfolding in dozens of countries. However, this second wave manifests itself strongly in new reported cases, but less in death counts compared to the first wave. Over the past three months in Germany, the reported cases increased by a factor five or more, whereas the death counts hardly grew. This discrepancy fueled speculations that the rise of reported cases would not reflect a second wave but only wider testing. 
                 </p>
                 <p>We find that this apparent discrepancy can be explained to a large extent by the age structure of the infected, and predict a pronounced increase of death counts in the near future, as the spread once again expands into older age groups. To re-establish control, and to avoid the tipping point when TTI capacity is exceeded, case numbers have to be lowered. Otherwise the control of the spread and the protection of vulnerable people will require more restrictive measures latest when the hospital capacity is reached. </p>
-              
+                
                 <div class="works-links">
                   <a class="works-link" href="https://doi.org/10.3238/arztebl.2020.0790"><i class="fas fa-chevron-right"></i> DOI/Aerzteblatt</a>
                   <a class="works-link" href="https://github.com/Priesemann-Group/covid19_research/tree/master/IFR_comparison"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
@@ -145,7 +144,7 @@
               </div>
               <div class="work-description panel">
                 <p>Without a cure, vaccine, or proven long-term immunity against SARS-CoV-2, test-trace-and-isolate (TTI) strategies present a promising tool to contain the viral spread.
-                For any TTI strategy, however, a major challenge arises from pre- and asymptomatic transmission as well as TTI-avoiders, which contribute to "hidden", unnoticed infection chains.
+                  For any TTI strategy, however, a major challenge arises from pre- and asymptomatic transmission as well as TTI-avoiders, which contribute to "hidden", unnoticed infection chains.
                 </p>
                 <div class="row">
                   <div class="col-lg-6">
@@ -155,243 +154,238 @@
                   </div>
                   <div class="col-lg-6">
                     <p>In our semi-analytical model, we identified two distinct tipping points between controlled and uncontrolled spreading:
-                    one, at which the behavior-driven reproduction number <math>R<sub>t</sub><sup>H</sup></math> of the hidden infections becomes too large to be compensated by the available TTI capabilities, and one at which the number of new infections starts to exceed the tracing capacity, causing a self-accelerating spread.</p>
-                    <p>
-                    We investigated how these tipping points depend on realistic limitations like limited cooperativity, missing contacts, and imperfect isolation, finding that TTI is likely not sufficient to contain the natural spread of SARS-CoV-2. Therefore, complementary measures like reduced physical contacts and improved hygiene probably remain necessary.</p>
+                      one, at which the behavior-driven reproduction number <math>R<sub>t</sub><sup>H</sup></math> of the hidden infections becomes too large to be compensated by the available TTI capabilities, and one at which the number of new infections starts to exceed the tracing capacity, causing a self-accelerating spread.</p>
+                      <p>
+                      We investigated how these tipping points depend on realistic limitations like limited cooperativity, missing contacts, and imperfect isolation, finding that TTI is likely not sufficient to contain the natural spread of SARS-CoV-2. Therefore, complementary measures like reduced physical contacts and improved hygiene probably remain necessary.</p>
+                    </div>
+                  </div>
+                  <div class="works-links">
+                    <a class="works-link" href="https://doi.org/10.1038/s41467-020-20699-8"><i class="fas fa-chevron-right"></i> DOI/Nature communications</a>
+                    <a class="works-link" href="https://covid19-tti.ds.mpg.de"><i class="fas fa-chevron-right"></i> Simulator website</a>
+                    <a class="works-link" href="https://github.com/Priesemann-Group/covid19_tti"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
                   </div>
                 </div>
-                <div class="works-links">
-                  <a class="works-link" href="https://doi.org/10.1038/s41467-020-20699-8"><i class="fas fa-chevron-right"></i> DOI/Nature communications</a>
-                  <a class="works-link" href="https://covid19-tti.ds.mpg.de"><i class="fas fa-chevron-right"></i> Simulator website</a>
-                  <a class="works-link" href="https://github.com/Priesemann-Group/covid19_tti"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
-                </div>
               </div>
-            </div>
 
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>Model-based and model-free characterization of epidemic outbreaks</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p>In these technical notes, we provide detailed background information for our work on Bayesian inference of change-points in the spread of SARS-CoV-2 and the effectiveness of non-pharmaceutical interventions (Dehning et al., Science, 2020).</p>
-                <figure>
-                  <img src="assets/img/tn-overview.png" class="img-fluid" alt="Overview technical notes"/>
-                </figure>
-                <p>We outline the general background of Bayesian inference and of SIR-like models. We explain the assumptions that underlie model-based estimates of the reproduction number and compare them to the assumptions that underlie model-free estimates, such as used in the Robert-Koch Institute situation reports. We highlight effects that originate from the two estimation approaches, and how they may cause differences in the inferred reproduction number. </p>
-                <p>Furthermore, we explore the challenges that originate from data availability — such as publication delays and inconsistent testing — and explain their impact on the time-course of inferred case numbers. Along with alternative data sources, this allowed us to cross-check and verify our previous results.</p>
-                <div class="works-links">
-                  <a class="works-link" href=https://www.medrxiv.org/content/10.1101/2020.09.16.20187484v1><i class="fas fa-chevron-right"></i> MedRxiv</a>
-                  <a class="works-link" href="https://github.com/Priesemann-Group/covid19_research/tree/master/Technical%20notes%20on%20Dehning%20et%20al.%2C%20Science%2C%202020"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>Model-based and model-free characterization of epidemic outbreaks</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p>In these technical notes, we provide detailed background information for our work on Bayesian inference of change-points in the spread of SARS-CoV-2 and the effectiveness of non-pharmaceutical interventions (Dehning et al., Science, 2020).</p>
+                  <figure>
+                    <img src="assets/img/tn-overview.png" class="img-fluid" alt="Overview technical notes"/>
+                  </figure>
+                  <p>We outline the general background of Bayesian inference and of SIR-like models. We explain the assumptions that underlie model-based estimates of the reproduction number and compare them to the assumptions that underlie model-free estimates, such as used in the Robert-Koch Institute situation reports. We highlight effects that originate from the two estimation approaches, and how they may cause differences in the inferred reproduction number. </p>
+                  <p>Furthermore, we explore the challenges that originate from data availability — such as publication delays and inconsistent testing — and explain their impact on the time-course of inferred case numbers. Along with alternative data sources, this allowed us to cross-check and verify our previous results.</p>
+                  <div class="works-links">
+                    <a class="works-link" href=https://www.medrxiv.org/content/10.1101/2020.09.16.20187484v1><i class="fas fa-chevron-right"></i> MedRxiv</a>
+                    <a class="works-link" href="https://github.com/Priesemann-Group/covid19_research/tree/master/Technical%20notes%20on%20Dehning%20et%20al.%2C%20Science%2C%202020"><i class="fas fa-chevron-right"></i> Supplementary source code</a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>Bachelors thesis: Monte Carlo simulations of periodic self-avoiding walks</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p> The self-avoiding walk is one of the simples basic problems in statistical physics. None than less, few properties can be determined in a rigorous mathematical fashion. In short a self-avoiding walk is a sequence of moves on a lattice also sometimes called a path. Theses paths are not allowed to cross over themself i.e. they do not visit a site more than once. One can use the framework of Monte Carlo methods to get good estimates for local and global properties of such paths. </p>
-                <div class="row">
-                  <div class="col-lg-5">
-                    <figure>
-                      <img src="assets/img/ba.png" class="img-fluid" alt="Picture of periodic self avoiding walk"/>
-                      <figcaption>
-                      Sample image of a periodic self avoiding walk with a rotation by π/2. Where the original walk is green and the rotated ones are red.
-                      </figcaption>
-                    </figure>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>Bachelors thesis: Monte Carlo simulations of periodic self-avoiding walks</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p> The self-avoiding walk is one of the simples basic problems in statistical physics. Nonetheless, few properties can be determined in a rigorous mathematical fashion. In short a self-avoiding walk is a sequence of moves on a lattice also sometimes called a path. Theses paths are not allowed to cross over themself i.e. they do not visit a site more than once. One can use the framework of Monte Carlo methods to get good estimates for local and global properties of such paths. </p>
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <figure>
+                        <img src="assets/img/ba.png" class="img-fluid" alt="Picture of periodic self avoiding walk"/>
+                        <figcaption>
+                          Sample image of a periodic self avoiding walk with a rotation by π/2. Where the original walk is green and the rotated ones are red.
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-lg-7">
+                      <p>In my bachelors thesis I looked at a further restricted type of self-avoiding walk, the periodic self-avoiding walk. These periodic self-avoiding walks have to additionally suffice periodic boundary conditions on a lattice. Overall there was a lot of work done for the normal self-avoiding walk but barely anything for the periodic case. Therefore, I choose the periodic self-avoiding walk as my topic for the bachelors thesis.</p>
+                      <p>Specifically, I wrote a program for the enumeration of short periodic self-avoiding walks and another one for the Monte Carlo simulation of longer walks. I compared important properties such as end to end distance or gyration radius between the exact enumeration and the approximations from Monte Carlo simulation. All programs were written in C++ and the data was evaluated using python and matplotlib. If all of that sound interesting or fun to you, feel free to take a look.</p>
+                    </div>
                   </div>
-                  <div class="col-lg-7">
-                    <p>In my bachelors thesis I looked at a further restricted type of self-avoiding walk, the periodic self-avoiding walk. These periodic self-avoiding walks have to additionally suffice periodic boundary conditions on a lattice. Overall there was a lot of work done for the normal self-avoiding walk but barely anything for the periodic case. Therefore, I choose the periodic self-avoiding walk as my topic for the bachelors thesis.</p>
-                    <p>Specifically, I wrote a program for the enumeration of short periodic self-avoiding walks and another one for the Monte Carlo simulation of longer walks. I compared important properties such as end to end distance or gyration radius between the exact enumeration and the approximations from Monte Carlo simulation. All programs were written in C++ and the data was evaluated using python and matplotlib. If all of that sound interesting or fun to you, feel free to take a look.</p>
+                  <div class="works-links">
+                    <a class="works-link disabled" href=""><i class="fas fa-chevron-right"></i> PDF</a>
+                    <a class="works-link disabled" href=""><i class="fas fa-chevron-right"></i> Supplementary source code</a>
                   </div>
                 </div>
-                <div class="works-links">
-                  <a class="works-link disabled" href=""><i class="fas fa-chevron-right"></i> PDF</a>
-                  <a class="works-link disabled" href=""><i class="fas fa-chevron-right"></i> Supplementary source code</a>
-                </div>
               </div>
-            </div>
-          </section>
-          <hr>
-          <section id="websites" class="no-padding">
-            <h3 class="works-title">Websites</h3>
-            <div class="description">
-              <p>In the past, I designed and built websites for me and some relatives. All of them were made free of charge and in my free time. I'm pretty sure I did not follow all best practices for web development, but did my best at the time being. Recently I also started to create some website for my publications. Most of them use webassembly in some way or another and were quite fun to program.
-              </p>
-            </div>
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>COVID-19 map of Germany</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p>The website shows a map of the weekly reported SARS-CoV-2 by age group and Region (Landkreis). For the weekly cases I use a rolling sum of the last 7 days. The incidence (cases per 100.000 residents) is calculated using the population data retrieved from <a href="https://www-genesis.destatis.de/genesis/online">destatis</a>. The website should update every 4 hours via a github workflow. It uses <a href="https://www.highcharts.com/">higcharts</a> in the frontend for plotting and python combined with our <a href="https://github.com/Priesemann-Group/covid19_inference">coronavirus toolbox</a> for data retrieval.
+            </section>
+            <hr>
+            <section id="websites" class="no-padding">
+              <h3 class="works-title">Websites</h3>
+              <div class="description">
+                <p>In the past, I designed and built websites for me and some relatives. All of them were made free of charge and in my free time. I'm pretty sure I did not follow all best practices for web development, but did my best at the time being. Recently I also started to create some website for my publications. Most of them use webassembly in some way or another and were quite fun to program.
                 </p>
-                <div class="works-links">
-                  <a class="works-link" href="https://semohr.github.io/risikogebiete_deutschland/"><i class="fas fa-chevron-right"></i> Website (German only)</a>
-                  <a class="works-link" href="https://github.com/semohr/risikogebiete_deutschland"><i class="fas fa-chevron-right"></i> Source code</a>
+              </div>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>COVID-19 map of Germany</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p>The website shows a map of the weekly reported SARS-CoV-2 by age group and Region (Landkreis). For the weekly cases I use a rolling sum of the last 7 days. The incidence (cases per 100.000 residents) is calculated using the population data retrieved from <a href="https://www-genesis.destatis.de/genesis/online">destatis</a>. The website should update every 4 hours via a github workflow. It uses <a href="https://www.highcharts.com/">higcharts</a> in the frontend for plotting and python combined with our <a href="https://github.com/Priesemann-Group/covid19_inference">coronavirus toolbox</a> for data retrieval.
+                  </p>
+                  <div class="works-links">
+                    <a class="works-link" href="https://semohr.github.io/risikogebiete_deutschland/"><i class="fas fa-chevron-right"></i> Website (German only)</a>
+                    <a class="works-link" href="https://github.com/semohr/risikogebiete_deutschland"><i class="fas fa-chevron-right"></i> Source code</a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>Test-trace-isolate simulator</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p>This website was created to have an convenient way to change parameters in the numeric simulation of the differential equations in the "The challenges of containing SARS-CoV-2 via test-trace-and-isolate" publication (see above). The website was also used to validate the results i.e. mainly the plots of the paper which were generated with matlab beforehand. The numerical simulation is using Runge-Kutta 4 which I implemented using C++ and ported to the browser with WebAssembly. The interactive plots were created using HighCharts and the main layout was done via bootstrap. Overall this website was quite the fun project and taught me quite a lot about WebAssembly and interaction with binary code in the browser.
-                </p>
-                <div class="works-links">
-                  <a class="works-link" href="https://covid19-tti.ds.mpg.de"><i class="fas fa-chevron-right"></i> Website</a>
-                  <a class="works-link" href="https://github.com/semohr/covid19_testing"><i class="fas fa-chevron-right"></i> Source code</a>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>Test-trace-isolate simulator</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p>This website was created to have an convenient way to change parameters in the numeric simulation of the differential equations in the "The challenges of containing SARS-CoV-2 via test-trace-and-isolate" publication (see above). The website was also used to validate the results i.e. mainly the plots of the paper which were generated with matlab beforehand. The numerical simulation is using Runge-Kutta 4 which I implemented using C++ and ported to the browser with WebAssembly. The interactive plots were created using HighCharts and the main layout was done via bootstrap. Overall this website was quite the fun project and taught me quite a lot about WebAssembly and interaction with binary code in the browser.
+                  </p>
+                  <div class="works-links">
+                    <a class="works-link" href="https://covid19-tti.ds.mpg.de"><i class="fas fa-chevron-right"></i> Website</a>
+                    <a class="works-link" href="https://github.com/semohr/covid19_testing"><i class="fas fa-chevron-right"></i> Source code</a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>My personal website</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p>The website (the one you are viewing right now) was made with bootstrap v5 and native javascript. I took some visual inspiration from <a href="https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/">iPortfolio</a> and if I copied some javascript code snippets from the web they are referenced in the source code.</p>
-                <div class="works-links">
-                  <a class="works-link" href=""><i class="fas fa-chevron-right"></i> Website</a>
-                  <a class="works-link" href="https://github.com/semohr/semohr.github.io"><i class="fas fa-chevron-right"></i> Source code</a>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>My personal website</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p>The website (the one you are viewing right now) was made with bootstrap v5 and native javascript. I took some visual inspiration from <a href="https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/">iPortfolio</a> and if I copied some javascript code snippets from the web they are referenced in the source code.</p>
+                  <div class="works-links">
+                    <a class="works-link" href=""><i class="fas fa-chevron-right"></i> Website</a>
+                    <a class="works-link" href="https://github.com/semohr/semohr.github.io"><i class="fas fa-chevron-right"></i> Source code</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>Meditative Wanderungen &amp; Die Wanderbegleiterin</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p>Theses two websites were made for my mothers occupations to help her with freelancing work. They are actually my first two (public) websites, and I learned a lot from developing them. These websites were made using bootstrap v4, php and javascript. I haven't uploaded the source code yet but if you are interested in it feel free to contact me by any means.</p>
-                <div class="works-links">
-                  <a class="works-link" href="https://meditative-wanderungen.de/"><i class="fas fa-chevron-right"></i> Meditative Wanderungen</a>
-                  <a class="works-link" href="https://die-wanderbegleiterin.de/"><i class="fas fa-chevron-right"></i> Die Wanderbegleiterin</a>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>Meditative Wanderungen &amp; Die Wanderbegleiterin</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p>Theses two websites were made for my mothers occupations to help her with freelancing work. They are actually my first two (public) websites, and I learned a lot from developing them. These websites were made using bootstrap v4, php and javascript. I haven't uploaded the source code yet but if you are interested in it feel free to contact me by any means.</p>
+                  <div class="works-links">
+                    <a class="works-link" href="https://meditative-wanderungen.de/"><i class="fas fa-chevron-right"></i> Meditative Wanderungen</a>
+                    <a class="works-link" href="https://die-wanderbegleiterin.de/"><i class="fas fa-chevron-right"></i> Die Wanderbegleiterin</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-          <hr>
-          <section id="other-projects" class="no-padding">
-            <h3 class="works-title">Fun little spare time projects</h3>
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>3D Flocking algorithm</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p>The flocking algorithm was created by Craig Reynolds to simulate the as the name already tells "flocking" behaviour of birds. The algorithm was amongst others used to generate realistic behaving bat swarms in Tim Burton's Batman Returns (1992).</p>
-                <p>I used this algorithm to learn about OpenGL and 3D computer graphics in general. The small application was write in C++ using GLAD and GLFW. This created a I find very satisfying to watch animation. A short example can be seen on my github repository. </p>
-                <div class="works-links">
-                  <a class="works-link" href="https://github.com/semohr/Flocking"><i class="fas fa-chevron-right"></i> Source code and application</a>
+            </section>
+            <hr>
+            <section id="other-projects" class="no-padding">
+              <h3 class="works-title">Fun little spare time projects</h3>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>3D Flocking algorithm</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p>The flocking algorithm was created by Craig Reynolds to simulate the as the name already tells "flocking" behaviour of birds. The algorithm was amongst others used to generate realistic behaving bat swarms in Tim Burton's Batman Returns (1992).</p>
+                  <p>I used this algorithm to learn about OpenGL and 3D computer graphics in general. The small application was write in C++ using GLAD and GLFW. This created a I find very satisfying to watch animation. A short example can be seen on my github repository. </p>
+                  <div class="works-links">
+                    <a class="works-link" href="https://github.com/semohr/Flocking"><i class="fas fa-chevron-right"></i> Source code and application</a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="works-item">
-              <div class="works-title accordion">
-                <h4>Collection of javascript applets</h4>
-                <i class="fas fa-lg"></i>
-              </div>
-              <div class="work-description panel">
-                <p>These applets were created for fun i.e. if I saw something interesting online and wanted to recreate it or in my early days as student to apply things I learned in the university. I haven't uploaded all applets yet, but am working on it. For now there is a fractal, double pendulum and circle packing.</p>
-                <div class="works-links">
-                  <a class="works-link" href="https://github.com/semohr/small-js-applets"><i class="fas fa-chevron-right"></i> Source code and applets</a>
+              <div class="works-item">
+                <div class="works-title accordion">
+                  <h4>Collection of javascript applets</h4>
+                  <i class="fas fa-lg"></i>
+                </div>
+                <div class="work-description panel">
+                  <p>These applets were created for fun i.e. if I saw something interesting online and wanted to recreate it or in my early days as student to apply things I learned in the university. I haven't uploaded all applets yet, but am working on it. For now there is a fractal, double pendulum and circle packing.</p>
+                  <div class="works-links">
+                    <a class="works-link" href="https://github.com/semohr/small-js-applets"><i class="fas fa-chevron-right"></i> Source code and applets</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-          </section>
-        </div>
-      </div>  
-    </section>
-
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>If you have questions on my resume or want more informations on a specific topic feel free to contact me.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Science Physics</h4>
-              <h5>2015 - 2020</h5>
-              <p><em>Universität Leipzig</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>A level</h4>
-              <h5>2012 - 2015</h5>
-              <p><em>Claude-Dornier-Schule, Friedrichshafen</em></p>
-            
-              <h5>2008 - 2012</h5>
-              <p><em>Karl-Maybach-Gymnasium, Friedrichshafen</em></p>
-            </div>         
+              
+            </section>
           </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Student assistant COVID-19 research</h4>
-              <h5>2020 - x</h5>
-              <p><em>Max Planck Institute, Göttingen</em></p>
-              <p>COVID-19 research</p>
+        </div>  
+      </section>
+
+      <section id="resume" class="resume">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Resume</h2>
+            <p>If you have questions on my resume or want more informations on a specific topic feel free to contact me.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor of Science Physics</h4>
+                <h5>2015 - 2020</h5>
+                <p><em>Universität Leipzig</em></p>
+              </div>
+              <div class="resume-item">
+                <h4>A level</h4>
+                <h5>2012 - 2015</h5>
+                <p><em>Claude-Dornier-Schule, Friedrichshafen</em></p>
+                
+                <h5>2008 - 2012</h5>
+                <p><em>Karl-Maybach-Gymnasium, Friedrichshafen</em></p>
+              </div>         
             </div>
-            <div class="resume-item">
-              <h4>IT & Turniermanager - Projektteam DreamHack</h4>
-              <h5>2018 - 2021</h5><h5>yearly</h5>
-              <p><em>Messe, Leipzig</em></p>
-              <p>Setup and management of different game servers for the <a href="http://www.dreamhack-leipzig.de/de/">Dreamhack</a> LAN area.</p>
-            </div>
-            <div class="resume-item">
-              <h4>Holding of IPGC Seminars</h4>
-              <h5>2018 - 2019</h5><h5>weekly</h5>
-              <p><em>Incorporated Society for Physical Grid Computation <small>e.V.</small>, Leipzig</em></p>
-              <p>Holding of the weekly seminar on the subject of "simulation of dynamic systems". Using the example of the flocking algorithm to explain Runge–Kutta methods and basic programming concepts to physic students.</p>
-            </div>
-            <div class="resume-item">
-              <h4>Airport information service</h4>
-              <h5>2012 - 2015</h5>
-              <p><em>Flughafen Friedrichshafen GmbH, Friedrichshafen</em></p>
-              <p>Providing information about air traffic, public transport, hotels etc.
-              Billing of parking fees, allocation of parking spaces and monitoring of free parking spaces.
-              Cash management and invoicing i.e. accounting of airport tours, sale of merchandise and stamps, currency exchange and sale of food stamps to employees.</p>
+            <div class="col-lg-6">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Student assistant COVID-19 research</h4>
+                <h5>2020 - x</h5>
+                <p><em>Max Planck Institute, Göttingen</em></p>
+                <p>COVID-19 research</p>
+              </div>
+              <div class="resume-item">
+                <h4>IT & Turniermanager - Projektteam DreamHack</h4>
+                <h5>2018 - 2021</h5><h5>yearly</h5>
+                <p><em>Messe, Leipzig</em></p>
+                <p>Setup and management of different game servers for the <a href="http://www.dreamhack-leipzig.de/de/">Dreamhack</a> LAN area.</p>
+              </div>
+              <div class="resume-item">
+                <h4>Holding of IPGC Seminars</h4>
+                <h5>2018 - 2019</h5><h5>weekly</h5>
+                <p><em>Incorporated Society for Physical Grid Computation <small>e.V.</small>, Leipzig</em></p>
+                <p>Holding of the weekly seminar on the subject of "simulation of dynamic systems". Using the example of the flocking algorithm to explain Runge–Kutta methods and basic programming concepts to physic students.</p>
+              </div>
+              <div class="resume-item">
+                <h4>Airport information service</h4>
+                <h5>2012 - 2015</h5>
+                <p><em>Flughafen Friedrichshafen GmbH, Friedrichshafen</em></p>
+                <p>Providing information about air traffic, public transport, hotels etc.
+                  Billing of parking fees, allocation of parking spaces and monitoring of free parking spaces.
+                Cash management and invoicing i.e. accounting of airport tours, sale of merchandise and stamps, currency exchange and sale of food stamps to employees.</p>
+              </div>
             </div>
           </div>
+
         </div>
-
-      </div>
-    </section>
+      </section>
 
 
-    <section id="contact">
-      <div class="container">
-        <div class="section-title">
+      <section id="contact">
+        <div class="container">
+          <div class="section-title">
             <h2>Contact</h2>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2>Address</h2>
-            <p>
-              Sebastian Mohr <br>
-              Littstraße 7A <br>
-              04103 Leipzig <br>
-              Germany 
-            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h2>Email</h2>
+              <a href="mailto:sebastian@mohrenclan.de"><i class="far fa-envelope"></i></a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </section>
   </main>
 

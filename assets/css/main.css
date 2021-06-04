@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian
-* @Last Modified time: 2020-10-19 11:16:27
+* @Last Modified time: 2021-06-02 15:39:31
 */
 
 
@@ -13,6 +13,7 @@
 body {
 	font-family: "Open Sans", sans-serif;
 	color: #272832;
+  white-space: nowrap;
 }
 
 a {
@@ -32,6 +33,10 @@ a.disabled {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+
+pre, code {
+    white-space: pre-line;
 }
 
 /*--------------------------------------------------------------
@@ -114,6 +119,23 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 4px;
 }
 
+.navigator.pages{
+  padding-top: 0px;
+}
+
+.navigator.pages a{
+  font-weight: 700;
+}
+
+.navigator.pages a.active{
+  padding-left: 40px;
+  color: #85aac8;
+}
+
+.navigator.pages .active i {
+    color: #85aac8;
+}
+
 
 /*Mobile Navigator toggle*/
 .mobile-navigator-toggle {
@@ -150,6 +172,11 @@ h1, h2, h3, h4, h5, h6 {
 .prevent-scrolling{
   overflow-y: hidden;
 }
+
+#header hr {
+  color: white;
+}
+
 
 /*--------------------------------------------------------------
 # Typewriter
