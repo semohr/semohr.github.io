@@ -16,8 +16,8 @@ import html as html_lib
 from bs4 import BeautifulSoup
 import re
 
-#REGEX is hell... this removes all ansi characters
-ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
+# REGEX is hell... this removes all ansi characters
+ansi_escape = re.compile(r"\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])")
 
 
 def cell_data_to_html(output):
@@ -29,21 +29,31 @@ def cell_data_to_html(output):
     display_data and stream see https://nbformat.readthedocs.io/en/latest/format_description.html#cell-types.
 
     """
-    
-    if output["output_type"] == "stream":
-        html = "<pre>\n" + ansi_escape.sub('', "".join(output["text"])) + "</pre>\n"
 
-    elif output["output_type"] == "execute_result" or output["output_type"] == "display_data":
+    if output["output_type"] == "stream":
+        html = "<pre>\n" + ansi_escape.sub("", "".join(output["text"])) + "</pre>\n"
+
+    elif (
+        output["output_type"] == "execute_result"
+        or output["output_type"] == "display_data"
+    ):
         # These types are have the same structure and normaly house pictures or text
         if "text/plain" in output["data"]:
-            html = "<pre>\n" + ansi_escape.sub('', "".join(output["data"]["text/plain"])) + "</pre>\n"        
+            html = (
+                "<pre>\n"
+                + ansi_escape.sub("", "".join(output["data"]["text/plain"]))
+                + "</pre>\n"
+            )
         if "image/png" in output["data"]:
-            html += f"<img src='data:image/png;base64,{output['data']['image/png']}'></img>"
-    return html 
+            html += (
+                f"<img src='data:image/png;base64,{output['data']['image/png']}'></img>"
+            )
+    return html
+
 
 def convert_ipynb(file):
-    #Load file
-    f = codecs.open(file, 'r') 
+    # Load file
+    f = codecs.open(file, "r")
     source = f.read()
     data = json.loads(source)
 
@@ -51,7 +61,7 @@ def convert_ipynb(file):
 
     # Iterate every cell
     for cell in data["cells"]:
-        #Convert depending on type
+        # Convert depending on type
         if cell["cell_type"] == "markdown":
             # Convert markdown to html and add to html text
             for snippet in cell["source"]:
@@ -64,24 +74,44 @@ def convert_ipynb(file):
             html_body += "</code></pre>\n"
 
             # Look for cell outputs only code cells have output
-            if len(cell["outputs"])>0:
+            if len(cell["outputs"]) > 0:
                 for output in cell["outputs"]:
                     html_body += "<div class='output'>"
                     html_body += cell_data_to_html(output)
                     html_body += "</div>"
 
-
     return html_body
 
+
 def convert_markdow(file):
-    #Load file
-    f = open(file,"r")
+    # Load file
+    f = open(file, "r")
 
     # Return html
-    return markdown.markdown( f.read() )
+    return markdown.markdown(f.read(), extensions=["fenced_code"])
 
 
-if __name__ == '__main__':
+def main(fpath):
+    filename, file_extension = os.path.splitext(fpath)
+
+    # Create html string
+    html = "<div class=blog-entry>"
+
+    # ipynb or markdown
+    if file_extension == ".ipynb":
+        html += convert_ipynb(fpath)
+    elif file_extension == ".md":
+        html += convert_markdow(fpath)
+
+    html += "</div>"
+
+    # Pretty print to file
+    res = BeautifulSoup(html, "html.parser").prettify()
+
+    return res
+
+
+if __name__ == "__main__":
 
     # Input file
     parser = argparse.ArgumentParser(
@@ -93,11 +123,10 @@ if __name__ == '__main__':
         type=str,
         help="Input file, for conversion can be .md or .ipynb.",
     )
+    parser.add_argument("save", type=bool, help="Save to file?", default=False)
     args = parser.parse_args()
 
     filename, file_extension = os.path.splitext(args.file)
-
-
 
     # Create html string
     html = "<div class=blog-entry>"
@@ -111,9 +140,17 @@ if __name__ == '__main__':
     html += "</div>"
 
     # Pretty print to file
-    res = BeautifulSoup(html, 'html.parser').prettify()
+    res = BeautifulSoup(html, "html.parser").prettify()
 
     # Write to file
-    f = open(f"{filename}.html", "w")
-    f.write(res)
-    f.close()
+
+    if args.save:
+        f = open(f"{filename}.html", "w")
+        f.write(res)
+        f.close()
+    else:
+        import sys
+
+        sys.stdout.write(res)
+        sys.stdout.flush()
+        sys.exit(0)

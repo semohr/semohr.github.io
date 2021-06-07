@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Sebastian Mohr - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Highlight JS -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/@highlightjs/cdn-assets@11.0.0/styles/default.min.css">
+
+  <!-- Master CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+  <!-- mobile navigator toggle button -->
+  <button type="button" class="mobile-navigator-toggle d-xl-none"><i class="fas fa-bars"></i></button>
+
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="me">
+        <img src="assets/img/profile.png" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Sebastian Mohr</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/semohr"><i class="fa fa-github"></i></a>
+          <a href="https://orcid.org/0000-0002-4721-0561"><i class="fab fa-orcid"></i></a>
+          <a href="mailto:sebastian@mohrenclan.de"><i class="far fa-envelope"></i></a>
+        </div>
+      </div>
+      <hr>
+      <nav class="navigator pages">
+        <ul>
+          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a class="active visible" href="blog.html"><i class="fa fa-book"></i> <span>Blog</span></a></li>
+        </ul>
+      </nav>
+      <hr>
+      <nav class="navigator blog" id="blog_nav">
+        <ul>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer id="footer">
+    <div class="container">
+      <div>
+        &copy; Sebastian Mohr
+      </div>
+      <p>last updated 1. Jun 2021</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="to-top"><i class="fas fa-chevron-up"></i></a>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/1d156e89e1.js" crossorigin="anonymous"></script>
+
+  <!-- Highlight JS -->
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.0.0/highlight.min.js"></script>
+
+  <!-- Highlight-Badge JS -->
+  <script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
+
+  <script>
+    hljs.configure({ useBR: true });
+    setTimeout(function () {
+      var pres = document.querySelectorAll("pre>code");
+      for (var i = 0; i < pres.length; i++) {
+        hljs.highlightBlock(pres[i]);
+      }
+      var options = {
+        contentSelector: ".container",
+            // Delay in ms used for `setTimeout` before badging is applied
+            // Use if you need to time highlighting and badge application
+            // since the badges need to be applied afterwards.
+            // 0 - direct execution (ie. you handle timing
+            loadDelay:0,
+
+            // CSS class(es) used to render the copy icon.
+            copyIconClass: "fa fa-copy",
+            // CSS class(es) used to render the done icon.
+            checkIconClass: "fa fa-check text-success",
+
+            // hook to allow modifying the text before it's pasted
+            onBeforeTextCopied: function(text, codeElement) {
+              return text;   //  you can fix up the text here
+            }
+          };
+          window.highlightJsBadge(options);
+        }
+        ,10);
+      </script>
+
+
+
+      <!-- Master JS -->
+      <script src="assets/js/main.js"></script>
+    </body>
