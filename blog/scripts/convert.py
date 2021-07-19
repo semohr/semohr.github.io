@@ -145,7 +145,7 @@ if __name__ == "__main__":
     # Write to file
 
     if args.save:
-        f = open(f"{filename}.html", "w")
+        f = open(f"./_html/{filename}.html", "w")
         f.write(res)
         f.close()
     else:

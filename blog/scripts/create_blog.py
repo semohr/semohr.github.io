@@ -4,8 +4,8 @@
 #
 # @Author: Sebastian B. Mohr
 # @Date:   2021-06-05 15:54:03
-# @Last Modified by:   Sebastian B. Mohr
-# @Last Modified time: 2021-06-07 17:41:23
+# @Last Modified by:   Sebastian Mohr
+# @Last Modified time: 2021-07-19 11:16:21
 # ------------------------------------------------------------------------------ #
 
 # Imports
@@ -27,14 +27,16 @@ for file in onlyfiles:
     # Check if file start with date, if not do not use them!
     try:
         date, name = file.split("_")
+        name, ending = name.split(".")
     except:
         continue
     # Create entry for file
     entry = {}
     entry["date"] = datetime.strptime(date, "%Y-%m-%d")
     entry["filename"] = file
+    entry["name"] = name
     entry["path"] = path
-    entry["title_short"] = "Test"
+    entry["title_short"] = entry["name"]
     entries.append(entry)
 
 # sort list on date
@@ -54,7 +56,7 @@ def create_nav_item(
     title_short,
 ):
     """
-    Creates html tag for an blog entry, with
+    Creates html tag for a blog entry, with
     clickable link and icon.
 
     TODO
@@ -77,8 +79,10 @@ nav.insert(1, ul)
 for entry in entries:
     entry["html"] = main(entry["path"] + "/" + entry["filename"])
 
-    # Create section
-
+    # Insert in section
+    content = BeautifulSoup(entry["html"], "html.parser")
+    section = soup.find(id="main")
+    section.insert(0, content)
 
 """# Save file
 """

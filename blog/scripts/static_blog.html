@@ -38,14 +38,14 @@
         </div>
       </div>
       <hr>
-      <nav class="navigator pages">
-        <ul>
-          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-          <li><a class="active visible" href="blog.html"><i class="fa fa-book"></i> <span>Blog</span></a></li>
+      <nav class="navigator_ext">
+        <ul>  
+          <li><a href="index.html" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
+          <li><a href="blog.html"><i class="fa fa-book"></i><span>Blog</span></a></li>
         </ul>
       </nav>
       <hr>
-      <nav class="navigator blog" id="blog_nav">
+      <nav class="navigator" id="blog_nav">
         <ul>
         </ul>
       </nav>
@@ -66,7 +66,7 @@
       <div>
         &copy; Sebastian Mohr
       </div>
-      <p>last updated 1. Jun 2021</p>
+      <p>Blog last updated 19. Jul 2021</p>
     </div>
   </footer>
 
@@ -80,42 +80,40 @@
 
   <!-- Highlight JS -->
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.0.0/highlight.min.js"></script>
+  <script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
 
   <!-- Highlight-Badge JS -->
   <script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
 
   <script>
-    hljs.configure({ useBR: true });
-    setTimeout(function () {
+  setTimeout(function () {
       var pres = document.querySelectorAll("pre>code");
       for (var i = 0; i < pres.length; i++) {
-        hljs.highlightBlock(pres[i]);
+          hljs.highlightBlock(pres[i]);
       }
       var options = {
-        contentSelector: ".container",
-            // Delay in ms used for `setTimeout` before badging is applied
-            // Use if you need to time highlighting and badge application
-            // since the badges need to be applied afterwards.
-            // 0 - direct execution (ie. you handle timing
-            loadDelay:0,
+          contentSelector: ".blog-entry",
+          // Delay in ms used for `setTimeout` before badging is applied
+          // Use if you need to time highlighting and badge application
+          // since the badges need to be applied afterwards.
+          // 0 - direct execution (ie. you handle timing
+          loadDelay:0,
 
-            // CSS class(es) used to render the copy icon.
-            copyIconClass: "fa fa-copy",
-            // CSS class(es) used to render the done icon.
-            checkIconClass: "fa fa-check text-success",
-
-            // hook to allow modifying the text before it's pasted
-            onBeforeTextCopied: function(text, codeElement) {
-              return text;   //  you can fix up the text here
-            }
-          };
-          window.highlightJsBadge(options);
-        }
-        ,10);
-      </script>
-
+          // CSS class(es) used to render the copy icon.
+          copyIconClass: "fa fa-copy",
+          // CSS class(es) used to render the done icon.
+          checkIconClass: "fa fa-check text-success",
+        
+          // hook to allow modifying the text before it's pasted
+          onBeforeTextCopied: function(text, codeElement) {
+            return text;   //  you can fix up the text here
+          }
+      };
+      window.highlightJsBadge(options);
+  },10);
+  </script>
 
 
-      <!-- Master JS -->
-      <script src="assets/js/main.js"></script>
-    </body>
+  <!-- Master JS -->
+  <script src="assets/js/main.js"></script>
+</body>

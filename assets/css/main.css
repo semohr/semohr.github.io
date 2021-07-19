@@ -1,8 +1,8 @@
 /*
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
-* @Last Modified by:   Sebastian
-* @Last Modified time: 2021-06-02 15:39:31
+* @Last Modified by:   Sebastian Mohr
+* @Last Modified time: 2021-07-19 10:40:25
 */
 
 
@@ -13,7 +13,6 @@
 body {
 	font-family: "Open Sans", sans-serif;
 	color: #272832;
-  white-space: nowrap;
 }
 
 a {
@@ -43,8 +42,51 @@ pre, code {
 # Navigator
 --------------------------------------------------------------*/
 
-.navigator {
-	padding-top: 30px;
+.navigator_ext {
+  margin:0 auto;
+  font-size: 18px;
+}
+
+.navigator_ext * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigator_ext a {
+  display: flex;
+  align-items: center;
+  color: #a9a3b0;
+  padding: 0px 20px;
+  transition: 0.3s;
+}
+
+.navigator_ext > ul > li {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.navigator_ext a i {
+  font-size: 18px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.navigator_ext .active i {
+  color: #7762b5;
+}
+.navigator_ext .active {
+  color: #7762b5;
+}
+
+.navigator_ext a:hover, .navigator_ext .active > a, .navigator_ext li:hover > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigator_ext a:hover i, .navigator_ext .active > a i, .navigator_ext li:hover > a i {
+  color: #fff;
 }
 
 .navigator * {
