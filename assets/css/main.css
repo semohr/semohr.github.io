@@ -2,7 +2,7 @@
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
 * @Last Modified by:   Sebastian Mohr
-* @Last Modified time: 2021-07-19 10:40:25
+* @Last Modified time: 2021-07-20 15:14:22
 */
 
 
@@ -32,10 +32,6 @@ a.disabled {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
-}
-
-pre, code {
-    white-space: pre-line;
 }
 
 /*--------------------------------------------------------------
@@ -312,7 +308,9 @@ pre, code {
   }
 }
 
-
+.container{
+  padding-top: 20px;
+}
 /*--------------------------------------------------------------
 # First look
 --------------------------------------------------------------*/

@@ -1,8 +1,8 @@
 /*
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 17:18:28
-* @Last Modified by:   Sebastian
-* @Last Modified time: 2020-10-18 13:33:38
+* @Last Modified by:   Sebastian Mohr
+* @Last Modified time: 2021-07-20 14:46:25
 */
 
 
@@ -145,6 +145,9 @@ for (var i = $sections.length-1; i >= 0; i--) {
   sectionIdTonavigationLink[id] = document.querySelectorAll('nav > ul > li > a[href=\\#' + id + ']') || null;
 }
 
+var ids_ex = ["myworks","publications","websites","other-projects"]
+
+
 // throttle function, enforces a minimum time interval
 function throttle(fn, interval) {
   var lastCall, timeoutId;
@@ -183,6 +186,7 @@ function highlightNavigation() {
   // iterate the sections
   for (var i = $sections.length-1; i >= 0; i--) {
     var currentSection = $sections[i];
+
     // get the position of the section
     var sectionTop = getOffset(currentSection).top;
 
@@ -210,7 +214,7 @@ function highlightNavigation() {
       } 
 
       //Dirty sub navigator hack
-      var ids_ex = ["myworks","publications","websites","other-projects"]
+      
       if (ids_ex.indexOf(id)>=0){
         // Set all sub navigator visible
         for(i=1;i<ids_ex.length;i++) {
@@ -218,8 +222,14 @@ function highlightNavigation() {
           // add .active class to the current link
           sectionIdTonavigationLink[ids_ex[i]][0].className += (' visible');
         }
-        sectionIdTonavigationLink["myworks"][0].className = sectionIdTonavigationLink["myworks"][0].className.replace(/ active/, '');
-        sectionIdTonavigationLink["myworks"][0].className += (' active');
+        if ("myworks" in sectionIdTonavigationLink){
+          sectionIdTonavigationLink["myworks"][0].className = sectionIdTonavigationLink["myworks"][0].className.replace(/ active/, '');
+          sectionIdTonavigationLink["myworks"][0].className += (' active');
+        }
+        if ("Spectral-graph-embedding" in sectionIdTonavigationLink){
+          sectionIdTonavigationLink["Spectral-graph-embedding"][0].className = sectionIdTonavigationLink["Spectral-graph-embedding"][0].className.replace(/ active/, '');
+          sectionIdTonavigationLink["Spectral-graph-embedding"][0].className += (' active');
+        }
       } else{
         for(i=1;i<ids_ex.length;i++) {
           sectionIdTonavigationLink[ids_ex[i]][0].className = sectionIdTonavigationLink[ids_ex[i]][0].className.replace(/ visible/, '');
