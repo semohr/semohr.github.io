@@ -13096,7 +13096,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Spectral-graph-embedding">Spectral graph embedding<a class="anchor-link" href="#Spectral-graph-embedding">&#182;</a></h1><p>In the following I want to take a short look into how to perform laplacian spectral graph embedding. We will start with the mathematic basics on graphs. If you don't care about the math and just want to see the code and some a nice plot you can jump right into the example.</p>
+<h1 id="Spectral-graph-embedding">Spectral graph embedding<a class="anchor-link" href="#Spectral-graph-embedding">&#182;</a></h1><p>In the following I want to take a short look into how to perform laplacian spectral graph embedding. We will start with the mathematic basics on graphs. If you don't care about the math and just want to see the codeyou can jump right into the example.</p>
 <h2 id="Basics">Basics<a class="anchor-link" href="#Basics">&#182;</a></h2><p>We want to consider a directed graph $G = (V,E)$ with in total $|V|=N$ vertexes. Edges are defined by an adjacency matrix $A$, with the matrix values $a_{i,j}&gt;0$. In the most simple case the adjacency matrix only contains ones and zeros but you can also weight connections by increasing the corresponding matrix values.</p>
 <p>A usefull property for graphs is the degree matrix $D$ which contains information about the degree of each node. In our directed graph this corresponds to the incomming connections.
 $$
@@ -13106,7 +13106,7 @@ D :=
     0 &amp; \text{else}
 \end{cases}
 $$</p>
-<p>Whereby the $deg(v_i)$ is the number of times a edge terminates at vertex $v_i$. In our directed graph that is the number of connections.</p>
+<p>Whereby the $deg(v_i)$ is the number of times a edge terminates at vertex $v_i$. In our directed graph that is the number of incomming connections.</p>
 <p>The Laplacian matrix is defined for directed graphs as</p>
 $$
 L :=
@@ -13129,7 +13129,7 @@ X\cdot\!1 = 0
 $$</p>
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>We can solve the above defined problem by the graph visualization spectral algorithm.</p>
 <ul>
-<li>Compute $L$</li>
+<li>Compute Laplacian matrix $L$</li>
 <li>Compute lowest three eigenpairs $(e_1,\lambda_1),(e_2,\lambda_2) ,(e_3,\lambda_3)$ i.e. $Le_k=\lambda_ke_k$</li>
 <li>Construct the embedding $X$ using the eigenvectors $e_2,e_3$
   $$
