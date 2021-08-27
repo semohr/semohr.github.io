@@ -1,8 +1,8 @@
 /*
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
-* @Last Modified by:   Sebastian Mohr
-* @Last Modified time: 2021-07-20 15:14:22
+* @Last Modified by:   Sebastian
+* @Last Modified time: 2021-08-27 18:27:34
 */
 
 
@@ -316,15 +316,14 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 #first_look {
-  width: 100%;
   height: 100vh;
-  background: url("../img/about-profile.jpg") top center;
+  /*background: url("../img/about-profile.jpg") top center;*/
   background-size: cover;
 }
 
 #first_look:before{
   content: "";
-  background: rgba(39, 28, 72, 0.4);
+  /*background: rgba(39, 28, 72, 0.4);*/
   position: absolute;
   bottom: 0;
   top: 0;
@@ -333,7 +332,21 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
-#first_look .first_look-container {
+#first_look {
+  margin-left: 325px;
+}
+@media (max-width: 1199px) {
+  #header {
+    left: -325px;
+  }
+  #first_look {
+    margin-left: 0;
+  }
+}
+
+
+
+#first_look {
   position: relative;
   z-index: 2;
   min-width: 300px;
@@ -362,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1024px) {
   #first_look {
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
   }
 }
 
@@ -692,3 +705,13 @@ top: 50%;
   display: none;
   overflow: hidden;
 } 
+.background-svg{
+  position: absolute;
+  bottom: -50px;
+  z-index: -100;
+  width: 100%;
+}
+.first_look-container{
+  position: absolute;
+  z-index: 2;
+}
