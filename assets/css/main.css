@@ -1,8 +1,8 @@
 /*
 * @Author: Sebastian B. Mohr
 * @Date:   2020-08-07 16:24:28
-* @Last Modified by:   Sebastian
-* @Last Modified time: 2021-08-27 18:27:34
+* @Last Modified by:   Sebastian Mohr
+* @Last Modified time: 2021-08-30 11:43:39
 */
 
 
@@ -707,7 +707,7 @@ top: 50%;
 } 
 .background-svg{
   position: absolute;
-  bottom: -50px;
+  bottom: 0;
   z-index: -100;
   width: 100%;
 }
